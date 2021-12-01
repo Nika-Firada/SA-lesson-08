@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-y: hidden;
+}
+.project-box {
+    width: 900px;
+    height: 600px;
+    margin: 10px auto;
+    background: url(../images/background.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.road {
+    height: 205px;
+    width: 900px;
+    background: url(../images/fone.png);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    z-index: 40;
+}
+.bus {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    z-index: 100;
+    animation-name: bus-move-right;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.car-image {
+    height: 100px;
+    width: 150px;
+}
+.car-box {
+    position: absolute;
+    right: 20px;
+    bottom: 35px;
+    z-index: 50;
+    animation-name: car-move-left;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes bus-move-right {
+    0%{
+        left: 20px;
+    }
+    100%{
+        left: 900px;
+    }
+
+}
+@keyframes car-move-left {
+    0%{
+        right: 20px;
+    }
+    100%{
+        right: 900px;
+    }
+
+}
+.camel-image {
+    width: 200px;
+    height: 150px;
+}
+.camel-box {
+    position: absolute;
+    bottom: 80px;
+    right: -190px;
+    z-index: 30;
+    animation-name: camels-move-left;
+    animation-duration: 55s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes camels-move-left {
+    0%{
+        right: -190px;
+    }
+    100%{
+        right: 900px;
+    }
+
+}
+.plane-image {
+    width: 70px;
+    height: 50px;
+}
+.plane-box {
+    position: absolute;
+    top: 150px;
+    left: -70px;
+    animation-name: plane-move-right;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+@keyframes plane-move-right {
+    0%{
+        left: -70px;
+    }
+    100%{
+        left: 900px;
+    }
+
+}
